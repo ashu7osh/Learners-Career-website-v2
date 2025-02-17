@@ -1,0 +1,7 @@
+modules = ["python3"]
+language = "python"
+run = "venv/bin/python app.py"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
