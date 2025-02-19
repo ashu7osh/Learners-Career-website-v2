@@ -6,7 +6,7 @@ engine = create_engine(
     db_connection_string,
     connect_args={
         "ssl": {
-            "ca": "/home/ashutosh/Desktop/ca.pem"
+            "ssl_ca": "/home/ashutosh/Desktop/Learners-Career-website-v2/Learners-Career-website-v2/ca.pem"
         }
     },
 )
