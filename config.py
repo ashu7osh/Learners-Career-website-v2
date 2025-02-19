@@ -1,0 +1,3 @@
+import os 
+
+DB_CONNECTION_STRING = os.getenv("DB_CONNECTION_STRING")
