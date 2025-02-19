@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, text
-from config import DB_CONNECTION_STRING
+import os 
 
-db_connection_string = DB_CONNECTION_STRING
+db_connection_string = os.getenv("DB_CONNECTION_STRING")
 engine = create_engine(
     db_connection_string,
     connect_args={
