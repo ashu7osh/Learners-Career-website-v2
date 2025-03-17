@@ -28,3 +28,20 @@ def load_job_from_db(id):
             return None 
         else:
             return rows[0]._asdict()  # Convert Row object to dictionary
+        
+def add_application_to_db(job_id, data):
+    with engine.connect() as conn:
+        query = text("""
+    INSERT INTO applications (job_id, name, email, linkedin, education, experience, resume) 
+    VALUES (:job_id, :name, :email, :linkedin, :education, :experience, :resume)
+""")
+
+    conn.execute(
+        query,
+        job_id=job_id,
+        name=data['full_name'],
+        email=data['email'],
+        education=data['education'],
+        experience=data['experience'],
+        resume=data['resume']
+    )

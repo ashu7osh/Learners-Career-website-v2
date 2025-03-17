@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+    <div class=" container">
+        <h1 class="text-center mt-2 mb-4">
+            Learners Career
+        </h1>
+        <h4>Your Application for {{job['title']}} has been submitted</h4>
+            <h5>Name</h5>
+        <div>{{ application['name'] }}</div>
+
+            <h5>Email</h5>
+        <div>{{ application['email'] }}</div>
+
+            <h5>LinkedIn Profile</h5>
+        <div>{{ application['linkedin'] }}</div>
+
+            <h5>Education</h5>
+        <div>{{ application['education'] }}</div>
+
+            <h5>Work Experience</h5>
+        <div>{{ application['experience'] }}</div>
+
+            <h5>Resume Link</h5>
+        <div>{{ application['resume'] }}</div>
+    </div>
+{% include 'footer.html' %}
+</body>
+</html>
